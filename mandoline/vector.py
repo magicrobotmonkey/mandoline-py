@@ -75,7 +75,7 @@ class Vector(object):
     def __radd__(self, v):
         return Vector(i + j for i, j in zip(v, self._values))
 
-    def __div__(self, s):
+    def __truediv__(self, s):
         """Divide each element in a vector by a scalar."""
         return Vector(x / (s+0.0) for x in self._values)
 
